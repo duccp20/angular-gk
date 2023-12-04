@@ -1,0 +1,48 @@
+.brand-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 10px;
+}
+
+.brand-item {
+  border-radius: 8px;
+  margin: 10px;
+  text-align: center;
+  width: 300px;
+  transition: transform 0.3s ease-in-out;
+  padding: 10px;
+}
+
+.brand-item:hover {
+  background-color: #fcf4f4;
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.brand-item img {
+  max-width: 100%;
+  max-height: 100%;
+  border-radius: inherit;
+}
+
+.brand-info {
+  padding: 15px;
+}
+
+.brand-info h2 {
+  margin: 10px 0;
+  font-size: 21px;
+}
+
+.brand-info p {
+  margin: 5px 0;
+  color: #d2635a;
+  font-weight: bold;
+}
+
+.brand-image {
+  padding: 10px;
+  border: 1px solid red;
+  border-radius: inherit;
+}

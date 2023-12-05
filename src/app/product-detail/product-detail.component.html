@@ -1,41 +1,25 @@
-<!-- product-detail.component.html
-<div class="modal" id="myModal" (click)="closeModal()">
-    <div class="modal-content" (click)="$event.stopPropagation()">
-        <span class="close" (click)="closeModal()">&times;</span>
-        <div class="modal-img">
-            <img src="./assets/hinh.jpg" alt="">
-        </div>
-        <h2>Danh sách địa điểm {{product.ten}}</h2>
-        <div class="modal-info">
-            <h3>{{product.ten}}đ</h3>
-            <ul>
-                <li>ddddddddd</li>
-            </ul>
-            <p>Không có địa điểm nào ở miền này.</p>
-        </div>
-    </div>
-</div> -->
-
 <div class="modal" (click)="closeModal()">
     <div class="modal-content" (click)="$event.stopPropagation()">
-        <span class="close-button" (click)="closeModal()">&times;</span>
-        <div class="modal-img">
-            <img src="./assets/hinh.jpg" alt="">
+        <div class="modal-header">
+            <span class="close-button" (click)="closeModal()">&times;</span>
+            <div class="modal-img">
+                <img src="./assets/logo/{{product.hinh}}" alt="">
+            </div>
+            <h2>Danh sách địa điểm {{product.ten}}</h2>
         </div>
-        <h2>Danh sách địa điểm {{product.ten}}</h2>
         <div class="modal-body">
             <div class="location">
                 <div *ngIf="product.diaChi.bac.length > 0">
                     <h3>Miền Bắc</h3>
-                    <p *ngFor="let diaChi of product.diaChi.bac">{{ diaChi }}</p>
+                    <p *ngFor="let diaChi of product.diaChi.bac"> -> {{ diaChi }}</p>
                 </div>
                 <div *ngIf="product.diaChi.trung.length > 0">
                     <h3>Miền Trung</h3>
-                    <p *ngFor="let diaChi of product.diaChi.trung">{{ diaChi }}</p>
+                    <p *ngFor="let diaChi of product.diaChi.trung"> -> {{ diaChi }}</p>
                 </div>
                 <div *ngIf="product.diaChi.nam.length > 0">
                     <h3>Miền Nam</h3>
-                    <p *ngFor="let diaChi of product.diaChi.nam">{{ diaChi }}</p>
+                    <p *ngFor="let diaChi of product.diaChi.nam"> ->{{ diaChi }}</p>
                 </div>
             </div>
         </div>

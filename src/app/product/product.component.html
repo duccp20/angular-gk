@@ -1,17 +1,7 @@
-<!-- <div class="brand-container">
-    <div *ngFor="let product of products" class="brand-item">
-        <img [src]="product.hinh" [alt]="product.ten">
-        <div class="brand-info">
-            <h2>{{ product.ten }}</h2>
-            <p>Hoàn tiền {{ product.hoanTien }}</p>
-        </div>
-    </div>
-</div> -->
-
 <div class="brand-container">
     <div *ngFor="let product of products" class="brand-item" (click)="openModal(product)">
         <div class="brand-image">
-            <img src="./assets/hinh.jpg" [alt]="product.ten">
+            <img src="./assets/logo/{{product.hinh}}" [alt]="product.ten">
         </div>
         <div class="brand-info">
             <h2>{{ product.ten }}</h2>
